@@ -1,22 +1,40 @@
 pipeline {
     agent any
 
+    environment {
+        PROJECT_NAME = 'MyApp'
+        DEPLOY_ENV = 'dev'
+    }
+
     stages {
-        stage('Build') {
+
+        stage('Init') {
             steps {
-                echo 'Building the project...'
+                echo "🔧 Initializing pipeline for ${PROJECT_NAME}"
+            }
+        }
+
+        stage('Build') {
+            when {
+                environment name: 'DEPLOY_ENV', value: 'dev'
+            }
+            steps {
+                echo "🛠️ Building project for ${DEPLOY_ENV} environment"
+                sh 'ls -al'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
+                echo '🧪 Running tests...'
+                sh 'echo Simulating tests...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the app...'
+                echo '🚀 Deploying the app...'
+                sh 'echo App deployed!'
             }
         }
     }
