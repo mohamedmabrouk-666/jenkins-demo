@@ -38,6 +38,9 @@ pipeline {
                 echo 'I am MohamedMabroukMohamedRashad'
                 echo 'I am MohamedMabroukMohamedRashad'
                 echo 'I am MohamedMabroukMohamedRashad'
+                 echo 'I am MohamedMabroukMohamedRashad'
+                echo 'I am MohamedMabroukMohamedRashad'
+                echo 'I am MohamedMabroukMohamedRashad'
             }
         }
     }
