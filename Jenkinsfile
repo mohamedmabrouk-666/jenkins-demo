@@ -36,6 +36,8 @@ pipeline {
                 echo '🚀 Deploying the app...'
                 sh 'echo App deployed!'
                 echo 'I am MohamedMabroukMohamedRashad'
+                echo 'I am MohamedMabroukMohamedRashad'
+                echo 'I am MohamedMabroukMohamedRashad'
             }
         }
     }
